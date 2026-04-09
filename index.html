@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Codenscious Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo-box">
+    <img src="images/codenscious_logo.jpeg">
+    <h2>Codenscious<span>.ai</span></h2>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Daily Work Tracker</h1>
+</section>
+
+<div class="container">
+
+<!-- EMPLOYEE -->
+<div class="card">
+<h3>Employee Info</h3>
+<input placeholder="Name" id="name">
+<select id="mood">
+  <option>Low</option>
+  <option>Medium</option>
+  <option>High</option>
+</select>
+<input placeholder="EMP ID" id="empId">
+<input type="date" id="date">
+</div>
+
+<!-- TASK TABLE -->
+<div class="card">
+<h3>Task Log</h3>
+
+<div id="taskContainer"></div>
+
+<button onclick="addTask()">+ Add Task</button>
+</div>
+
+<!-- BLOCKERS -->
+<div class="card">
+<h3>Blockers & Risks</h3>
+<input id="blockers" placeholder="Blockers today">
+
+<select id="escalation">
+  <option>No</option>
+  <option>Yes</option>
+</select>
+
+<input id="escalationDetails" placeholder="If yes, details">
+
+<select id="risk">
+  <option>None</option>
+  <option>Quality</option>
+  <option>Timeline</option>
+  <option>Integration</option>
+  <option>System</option>
+</select>
+</div>
+
+<!-- RESEARCH -->
+<div class="card">
+<h3>Research Tasks</h3>
+<input id="researchQ" placeholder="Question">
+<input id="timeBox" placeholder="Time Box (30 min)">
+<select id="decision">
+  <option>Proceed</option>
+  <option>Escalate</option>
+  <option>Drop</option>
+</select>
+</div>
+
+<!-- TOMORROW -->
+<div class="card">
+<h3>Tomorrow Plan</h3>
+
+<div id="planContainer"></div>
+
+<button onclick="addPlan()">+ Add Priority</button>
+</div>
+
+<!-- REFLECTION -->
+<div class="card">
+<h3>Today's Reflection</h3>
+<input id="reflection" placeholder="One line reflection">
+</div>
+
+<!--  ONLY CHANGE: id added -->
+<button id="submitBtn" onclick="submitData()">Submit Report</button>
+
+</div>
+
+<!-- ONLY ADDITION: popup -->
+<div id="successPopup" class="popup hidden">
+  <h2>🎉 Submitted Successfully!</h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
